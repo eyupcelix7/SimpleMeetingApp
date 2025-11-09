@@ -2,7 +2,26 @@
 	ViewBag.Title = "Kabul Et";
 }
 
-<h1 class="h4">Toplantı Katılım Formu</h1>
+<h1 class="h4 text-center">Toplantı Katılım Formu</h1>
 <form action="">
+	<div class="mb-3">
+		<label for="Name" class="form-label">Ad</label>
+		<input type="text" name="Name" class="form-control" id="Name" />
+	</div>
+	<div class="mb-3">
+		<label for="Phone" class="form-label">Telefon Numarası</label>
+		<input type="tel" name="Phone" id="Phone" class="form-control" />
+	</div>
+	<div class="mb-3">
+		<label for="Email" class="form-label">E-Posta Adresi</label>
+		<input type="email" name="Email" id="Email" class="form-control" />
+	</div>
+	<div class="mb-3">
+		<label for="KatilimDurumu" class="form-label">Katılım Durumu</label>
+		<select class="form-select" id="KatilimDurumu" name="KatilimDurumu">
+			<option value="evet">Evet, Geliyorum</option>
+			<option value="hayir">Hayır, Gelmiyorum</option>
+		</select>
+	</div>
 	<button class="btn btn-primary" type="submit">Kaydet</button>
 </form>
