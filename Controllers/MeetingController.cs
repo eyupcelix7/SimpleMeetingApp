@@ -26,5 +26,10 @@ namespace SimpleMeetingApp.Controllers
             List<UserInfo> users = Repository.Users;
             return View(users);
         }
+
+        public IActionResult Details(int id)
+        {
+            return View(Repository.GetById(id));
+        }
     }
 }

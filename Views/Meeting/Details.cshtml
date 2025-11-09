@@ -1,0 +1,16 @@
+﻿@model UserInfo
+@{
+	ViewBag.Title = "Başvuru Detayı";
+	string className = Model.KatilimDurumu ? "primary" : "danger";
+	string durum = Model.KatilimDurumu ? "Katılıyor" : "Katılmıyor";
+}
+<main class="text-center">
+	<h1 class="h4">Başvuru Detayı </h1>
+		<p>
+			<span class="badge text-bg-@className">@durum</span>
+		</p>
+		<p>İsim: @Model.Name</p>
+		<p>Email: @Model.Email</p>
+		<p>Telefon: @Model.Phone</p>
+		<a asp-contoller="Meeting" asp-action="List" class="btn btn-outline-@className">Katılımcı Listesi</a>
+</main>
