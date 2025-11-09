@@ -11,15 +11,17 @@ namespace SimpleMeetingApp.Controllers
 
             //ViewBag.Selamla = saat > 12 ? "İyi Günlers" : "Günaydın";
             //ViewBag.Username = "eyupcelix7";
-            ViewData["Selamla"] = saat > 12 ? "İyi günler aga" : "Günaydın hacı";
+            ViewData["Selamla"] = saat > 12 ? "İyi Günler" : "Günaydın";
             ViewData["Username"] = "eyupcelix7";
+
+            int katilimciSayisi = Repository.Users.Count(x=> x.KatilimDurumu == true);
 
             MeetingInfo info = new MeetingInfo
             {
                 Id = 1,
                 Location = "Istanbul",
                 Date = DateTime.Now,
-                NumberOfPeople = 4
+                NumberOfPeople = katilimciSayisi
             };
 
             return View(model: info);

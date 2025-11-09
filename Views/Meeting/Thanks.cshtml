@@ -8,7 +8,7 @@
 	@if(Model.KatilimDurumu == true)
 	{
 		<p>Teşekkürler, @Model.Name toplantıya sizinle birlikte @ViewBag.PeopleCount kişi katılıyor.</p>
-		<a class="btn btn-sm btn-outline-primary" asp-controller="Meeting" asp-action="Apply" >Katılımcıları Listele</a>
+		<a class="btn btn-sm btn-outline-primary" asp-controller="Meeting" asp-action="List" >Katılımcıları Listele</a>
 	}
 	else{
 		<p>Toplantıya katılım sağlamadığınız için üzgünüz, @Model.Name </p>

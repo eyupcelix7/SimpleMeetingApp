@@ -23,7 +23,8 @@ namespace SimpleMeetingApp.Controllers
         [HttpGet]
         public IActionResult List()
         {
-            return View();
+            List<UserInfo> users = Repository.Users;
+            return View(users);
         }
     }
 }
