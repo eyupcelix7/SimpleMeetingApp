@@ -4,9 +4,9 @@ namespace SimpleMeetingApp.Controllers
 {
     public class HomeController : Controller
     {
-        public string Index()
+        public IActionResult Index()
         {
-            return "Selamun Aleyküm";
+            return View();
         }
     }
 }
