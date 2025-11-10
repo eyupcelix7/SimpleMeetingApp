@@ -1,1 +1,1 @@
-# SimpleMeetingApp
+Ýlk .Net Core Uygulamam
