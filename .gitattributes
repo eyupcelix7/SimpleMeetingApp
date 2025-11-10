@@ -5,8 +5,6 @@
 
 wwwroot/lib/** linguist-vendored
 *.cs linguist-detectable=true
-*.cshtml linguist-detectable=true
-*.razor linguist-detectable=true
 
 ###############################################################################
 # Set default behavior for command prompt diff.
