@@ -14,10 +14,17 @@ namespace SimpleMeetingApp.Controllers
         [HttpPost]
         public IActionResult Apply(UserInfo user)
         {
-            //Console.WriteLine($"Adı: {user.Name}, Telefon Numarası: {user.Phone}, Email Adresi: {user.Email}, Katılım Durumu: {user.KatilimDurumu.ToString()}");
-            Repository.CreateUser(user);
-            ViewBag.PeopleCount = Repository.Users.Count(x => x.KatilimDurumu == true);
-            return View("Thanks",model: user);
+            if(ModelState.IsValid)
+            {
+                //Console.WriteLine($"Adı: {user.Name}, Telefon Numarası: {user.Phone}, Email Adresi: {user.Email}, Katılım Durumu: {user.KatilimDurumu.ToString()}");
+                Repository.CreateUser(user);
+                ViewBag.PeopleCount = Repository.Users.Count(x => x.KatilimDurumu == true);
+                return View("Thanks", model: user);
+            }
+            else
+            {
+                return View(user);
+            }
         }
 
         [HttpGet]
